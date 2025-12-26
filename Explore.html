@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="Layout5.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+     <link rel="stylesheet" href="cdn.jsdelivr.net">
+     <style>
+        .explore-container{
+            background-color: #F5EBDD;
+        }
+        .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding:20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.explore-container h1{
+    text-align: center;
+}
+
+
+.card1 {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card1 p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.card-image-placeholder {
+    height: 300px;
+    background-color: #e0e0e0; /* Placeholder color for the image area */
+    
+}
+.card-image-placeholder img{
+    width:100%;
+    height: 300px;
+}
+
+     </style>
+</head>
+<body>
+    <header class="main-header">
+    <nav class="navbar">
+      <a href="Homeuser.html">Home</a>
+      <a href="Reservation.html">Reservation</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Aboutus.html">About us</a>
+      <a href="Contactus.html">Contact us</a>
+      <a href="Help.html">Help</a>
+    </nav>
+     <div class="nav-container">
+            <div class="logo"><span style="color: #B89C65;">Book</span>mytable<p style="color: white;">Never Wait for your meal</p></div>
+            <div class="search-container">
+            <input type="search" placeholder="Search">
+            <button type="button">🔍</button>
+        </div>
+        <div class="users">
+            <span class="notification-icon"><i class="fa-regular fa-bell"></i></span> 
+            <span ><a href="Contactus.html" style="text-decoration: none;color: #B89C65;"><i class="fa fa-user"></i></a></span>
+            <span class="icon"><a href="Wishlist.html"><i class="fa-regular fa-heart"></i></a></span>
+        <div class="user-profile"><img src="Photo by Dani.png"></div>
+    </div>
+        </div>
+  </header>  
+
+
+
+
+    <div class="explore-container">
+    <div>
+        <img src="unsplash_zS2E12aPO00-1.png" width="100%" height="400px">
+    </div>
+    <div>
+    <h1>Explore Restaurants by famous Collections in Chennai</h1>
+    </div>
+    <main class="product-grid">
+            <div class="card1" onclick="redirectToPage()">
+                <div class="card-image-placeholder">
+                    <img src="unsplash_OlHQyIHQorc-1.png">
+                </div>
+                <div class="card-body">
+                    <h1>Perfect-Buffet</h1>
+                    <div>
+                        <p>7 Restaurants found</p>                    
+                    </div>
+                    </div>
+            </div>
+            <script>
+        function redirectToPage() {
+    window.location.href = "Reservation.html";
+}
+    </script>
+
+            <div class="card1">
+                <div class="card-image-placeholder">
+                   <img src="unsplash_NvxVZ3xMc2M-2.png"> 
+                </div>
+                <div class="card-body">
+                    <h1>Barbeque</h1>
+                    <div class="card-price">
+                        <p>6 Restaurants Found</p>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="card1">
+                <div class="card-image-placeholder">
+                    <img src="unsplash_NvxVZ3xMc2M-1.png">
+                </div>
+                <div class="card-body">
+                    <h1>Chinese</h1>
+                    <div class="card-price">
+                       <p>5 Restaurants found</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-image-placeholder">
+                    <img src="unsplash_zS2E12aPO00-1.png">
+                </div>
+                <div class="card-body">
+                    <h1>Dining-Resi</h1>
+                    <div class="card-price">
+                        <p>7 Restaurants found</p>
+                    </div>
+                    </div>
+            </div>
+            <div class="card1">
+                <div class="card-image-placeholder">
+                    <img src="Register.png">
+                </div>
+                <div class="card-body">
+                    <h1>
+                        Romantic
+                    </h1>
+                    <div class="card-price">
+                        <p>6 Restaurants found</p>
+                    </div>
+                    </div>
+            </div>
+            <div class="card1">
+                <div class="card-image-placeholder">
+                    <img src="unsplash_8TH0fB63XWg.png">
+                </div>
+                <div class="card-body">
+                    <h1>Luxury</h1>
+                    <div class="card-price">
+                    <p>5 Restaurants found</p>
+                    </div>
+                    </div>
+            </div>
+            <div class="card1">
+                <div class="card-image-placeholder">
+                    <img src="unsplash_OlHQyIHQorc-1.png">
+                </div>
+                <div class="card-body">
+                    <h1>Perfect-Buffet</h1>
+                    <div>
+                        <p>7 Restaurants found</p>                    
+                    </div>
+                    </div>
+            </div>
+            <div class="card1">
+                <div class="card-image-placeholder">
+                   <img src="unsplash_NvxVZ3xMc2M-2.png"> 
+                </div>
+                <div class="card-body">
+                    <h1>Barbeque</h1>
+                    <div class="card-price">
+                        <p>6 Restaurants Found</p>
+                    </div>
+                    </div>
+            </div>
+            <div class="card1">
+                <div class="card-image-placeholder">
+                    <img src="unsplash_zS2E12aPO00-1.png">
+                </div>
+                <div class="card-body">
+                    <h1>Chinese</h1>
+                    <div class="card-price">
+                        <p>5 Restaurants found</p>
+                    </div>
+                    </div>
+            </div>
+             <div class="card1">
+                <div class="card-image-placeholder">
+                    <img src="unsplash_zS2E12aPO00-1.png">
+                </div>
+                <div class="card-body">
+                    <h1>Dining-Resi</h1>
+                    <div class="card-price">
+                        <p>7 Restaurants found</p>
+                    </div>
+                    </div>
+            </div>
+           <div class="card1">
+                <div class="card-image-placeholder">
+                    <img src="Register.png">
+                </div>
+                <div class="card-body">
+                    <h1>
+                        Romantic
+                    </h1>
+                    <div class="card-price">
+                        <p>6 Restaurants found</p>
+                    </div>
+                    </div>
+            </div>
+            <div class="card1">
+                <div class="card-image-placeholder">
+                    <img src="unsplash_8TH0fB63XWg.png">
+                </div>
+                <div class="card-body">
+                    <h1>Luxury</h1>
+                    <div class="card-price">
+                    <p>5 Restaurants found</p>
+                    </div>
+                    </div>
+            </div> 
+
+
+
+        </main>
+
+        </div>
+        <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Add Your Restaurant</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Info & conditions</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Cities</h4>
+                    <ul>
+                        <li><a href="#">Chennai</a></li>
+                        <li><a href="#">Bangalore</a></li>
+                        <li><a href="#">Hyderabad</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Booking Status</a></li>
+                        <li><a href="#">Add Restaurant</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <p style="padding-left: 100px;font-weight: bold;">_________________________________________________________________________________________________________________________________________________________________</p>
+            <div class="footer-city">
+                <div class="city">
+                    <p>Restaurant in Chennai</p>
+                    <p>Restaurant in Pune</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Bangalore</p>
+                    <p>Restaurant in Kolkata</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Mumbai</p>
+                    <p>Restaurant in Hyderabad</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div><p>© 2023, **Book My Table**.Com, all rights reserved.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-google" style="color: rgb(140, 188, 242);" ></i>
+                    <i class="fa-brands fa-twitter" style="color: rgb(70, 148, 237);"></i>
+                    <img src="instagram-icon.jpg" width="25px" style="border-radius: 10px;"></div>    
+                </div>
+                <div>
+                <p><i class="fa fa-phone"></i> (123) 8940-985498</p>
+                <p><i class="fa fa-envelope"></i> Info@Bookmytable.com</p>
+                <p><i class="fas fa-location-dot"></i> Chennai 54375387</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

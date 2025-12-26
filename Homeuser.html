@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="Layout5.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+    .hero-banner {
+    background-color: #6a5b40; 
+    color: white;
+    text-align: center;
+    padding: 80px 40px;
+    background-image: url('Frame 419.png');
+    background-size: cover;
+    background-position: center;
+    height:250px;
+}
+
+.hero-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 200px;
+    margin-right: 300px;
+    line-height: 1.2;
+    margin-top: 80px;
+    text-align: left;
+    letter-spacing: 2px;
+}
+.cities-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5EBDD;
+}
+
+.cities-section h2 {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+/* General styling for the container */
+.scroller {
+  max-width: 100%;
+  overflow: hidden; /* Hides the duplicated content until it moves into view */
+}
+
+/* Flexbox container for horizontal arrangement */
+.scroller-inner {
+  display: flex;
+  width: max-content; /* Allows all cards to sit side-by-side */
+  animation: bidirectional-scroll 5s linear infinite alternate;  /* Apply the animation */
+}
+.card p{
+    font-size: x-large;
+}
+
+
+/* Styling for individual cards (adjust as needed) */
+.card {
+  
+  flex-shrink: 0;
+  margin: 0 1rem;
+  width: 700px;
+  border-radius: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes bidirectional-scroll {
+  0% {
+    transform: translateX(0); /* Start position (left) */
+  }
+  100% {
+    /* End position: moves right by a certain amount (e.g., 500px) */
+    transform: translateX(-1200px); 
+  }
+}
+
+
+
+
+/* How it works Section */
+.how-it-works-section {
+    background-color: #F5EBDD;
+    padding: 50px 0;
+    text-align: center;
+    color: black;
+}
+
+.how-it-works-section h2 {
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.step {
+    width: 22%;
+    background-color: #F5EBDD;
+}
+
+.step i {
+    font-size: 5rem;
+    color: #B89C65;
+    margin-bottom: 10px;
+}
+.step p{
+    font-size: 38px;
+}
+/* Reviews Section (Background placeholder) */
+.reviews-section {
+    background-color: #B89C65;
+    background-image: url('Frame 429.png');
+    height: 350px;
+    background-size: cover;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+.reviews-section h2{
+    margin-top: 10px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #B89C65;
+    padding: 40px 0;
+    color: white;
+}
+
+.testimonials-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+}
+
+.testimonial {
+    text-align: center;
+    width: 30%;
+}
+
+.testimonial i, .testimonial img {
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+/* Newsletter & Location Section */
+.newsletter-location-section {
+    background-color: #F5EBDD;
+}
+
+.newsletter-location-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.location-map{
+    flex: 1;
+    height:300px;
+    background-image: url('map.png');
+}
+.newsletter-signup {
+    flex:2;
+}
+.location-map i{
+    color:black;
+}
+.location-map img{
+    width:100%;
+    height: 100%;
+}
+
+.newsletter-signup h2 {
+    margin-bottom: 15px;
+    margin-left: 100px;
+}
+
+.newsletter-signup form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-signup input {
+    padding: 20px;
+    margin-left: 100px;
+    border: 1px solid #ccc;
+    width:500px;
+    border-radius: 8px;
+    
+}
+.newsletter-signup ::placeholder{
+    color: black;
+    font-size: 28px;
+}
+
+
+.newsletter-signup button {
+    background-color: #B89C65;
+    color: white;
+    padding: 20px 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width:150px;
+    margin-left: 20px;
+    font-size: 22px;
+}
+button{
+    background-color: #B89C65;
+    width:200px;
+    height:60px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    font-size: larger;
+    color: white;
+}
+.user-profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.users{
+    display: flex;
+    flex-direction: row;
+    color:#B89C65;
+    font-size: 40px;
+    gap:30px;
+}
+.icon{
+    color: #B89C65;
+    text-decoration: none;
+}
+.icon a{
+    text-decoration: none;
+    color: #B89C65;
+}
+
+
+</style>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <a href="Home.html" class="active">Home</a>
+      <a href="Reservation.html">Reservation</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Aboutus.html">About us</a>
+      <a href="Contactus.html">Contact us</a>
+      <a href="Help.html">Help</a>
+    </nav>
+     <div class="nav-container">
+            <div class="logo"><span style="color: #B89C65;">Book</span>mytable<p style="color: white;">Never Wait for your meal</p></div>
+            <div class="search-container">
+            <input type="search" placeholder="Search">
+            <button type="button">🔍</button>
+        </div>
+        <div class="users">
+            <span class="notification-icon"><i class="fa-regular fa-bell"></i></span> 
+            <span class="icon" style="text-decoration: none;color: #B89C65;" ><a href="Contactus.html"><i class="fa fa-user"></i></a></span>
+            <span class="icon"><a href="wishlist.html"><i class="fa-regular fa-heart"></i></a></span>
+        <div class="user-profile"><img src="Photo by Dani.png"></div>
+    </div>
+        </div>
+  </header>  
+  <section class="hero-banner">
+        <h1>Book Table at your favourite restaurant and get served instantly</h1>
+    </section>
+<div>
+     <section class="cities-section">
+        <div class="container">
+            <h2>Explore restaurant your city</h2>
+             <div class="scroller" onclick="redirectToPage()" data-animated="true">
+        <div class="scroller-inner">
+                <div class="card">
+                    <img src="Chennai.png" alt="Chennai">
+                    <p>Chennai</p>
+                </div>
+                <div class="card">
+                    <img src="Bangalore.png" alt="Bangalore">
+                    <p>Bangalore</p>
+                </div>
+                <div class="card">
+                    <img src="Mumbai.png" alt="Mumbai">
+                    <p>Mumbai</p>
+                </div>
+                <div class="card">
+                    <img src="Bangalore.png" alt="Hyderabad">
+                    <p>Hyderabad</p>
+                </div>
+                <div class="card">
+                    <img src="Chennai.png" alt="Chennai">
+                    <p>Chennai</p>
+                </div>
+                 
+            </div>
+        </div>
+         
+        </div>
+
+    </section>
+    <script>
+        function redirectToPage() {
+    window.location.href = "Explore.html";
+}
+    </script>
+     <section class="how-it-works-section">
+        <div class="container">
+            <h2>How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <i class="fas fa-search icon"></i>
+                    <p>Search restaurant</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-calendar-alt"></i>
+                    <p>Select date/time</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-chair"></i>
+                    <p>Reserve your table</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-utensils"></i>
+                    <p>Get served instantly</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <!-- Customer Reviews Section (Placeholder for image background) -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container testimonials-content">
+            <div class="testimonial">
+                <img src="customer1.png" alt="Customer 1">
+                <p>Aman.P</p>
+                <p><span style="color: gold; font-size: 30px;">★★★★★</span></p>
+                <p>Great and excellent service.</p>
+            </div>
+            <div class="testimonial">
+        <img src="customer2.png" alt="Customer 2">
+                <p>David.p</p>
+                <p><span style="color: gold; font-size: 30px;">★★★★★</span></p>
+            <p>Great and Excellent Service.</p>
+            </div>
+            <div class="testimonial">
+        <img src="customer3.png" alt="Customer 3">
+                <p>Gopi.P</p>
+                <p><span style="color: gold; font-size: 30px;">★★★★★</span></p>
+                <p>Flexible service.</p>
+             </div>
+        </div>
+    </section>
+
+    <!-- Newsletter & Location Section -->
+    <section class="newsletter-location-section">
+        <div class="container newsletter-location-content">
+            <div class="location-map">
+                <div style="margin-top: 100px;font-size: larger;font-weight: bold;margin-left: 100px;"><i class="fas fa-location-dot"></i>
+        <span style="color:rgb(78, 173, 195)">G</span>
+        <span style="color: rgb(200, 84, 84);">O</span>
+        <span style="color: yellow;">O</span>
+        <span style="color: rgb(78, 173, 195);">G</span>
+        <span style="color: rgb(75, 214, 233);">L</span>
+        <span style="color: rgb(200, 84, 84);">E</span>
+    </div>
+                <div style="color: #B89C65;font-size: larger;font-weight: bold;margin-top: 50px;margin-left: 40px;">
+                <p><i class="fa fa-phone"></i> (123) 8940-985498</p>
+                <p><i class="fa fa-envelope"></i> Info@Bookmytable.com</p>
+                <p><i class="fas fa-location-dot"></i>Chennai 54375387</p>
+                </div>
+            </div>
+            <div class="newsletter-signup">
+                <h2>Get offers in Your Inbox</h2>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Add Your Restaurant</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Info & conditions</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Cities</h4>
+                    <ul>
+                        <li><a href="#">Chennai</a></li>
+                        <li><a href="#">Bangalore</a></li>
+                        <li><a href="#">Hyderabad</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Booking Status</a></li>
+                        <li><a href="#">Add Restaurant</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <p style="padding-left: 100px;font-weight: bold;">_________________________________________________________________________________________________________________________________________________________________</p>
+            <div class="footer-city">
+                <div class="city">
+                    <p>Restaurant in Chennai</p>
+                    <p>Restaurant in Pune</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Bangalore</p>
+                    <p>Restaurant in Kolkata</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Mumbai</p>
+                    <p>Restaurant in Hyderabad</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div><p>© 2023, **Book My Table**.Com, all rights reserved.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-google" style="color: rgb(140, 188, 242);" ></i>
+                    <i class="fa-brands fa-twitter" style="color: rgb(70, 148, 237);"></i>
+                    <img src="instagram-icon.jpg" width="25px" style="border-radius: 10px;"></div>    
+                </div>
+                <div>
+                <p><i class="fa fa-phone"></i> (123) 8940-985498</p>
+                <p><i class="fa fa-envelope"></i> Info@Bookmytable.com</p>
+                <p><i class="fas fa-location-dot"></i> Chennai 54375387</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

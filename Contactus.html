@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="Layout5.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+    .form-cont{
+        background-color: #F5EBDD;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin-left: 200px;
+    margin-bottom: 50px;
+    height:500px;
+}
+
+.header2 {
+    text-align: center;
+    color:black;
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex-basis: 48%; /* Two elements per row */
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+    font-size: 24px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 70%;
+    height:60px;
+    padding: 20px;
+    border: 1px solid #B89C65;
+    border-radius: 10px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    margin-top: 5px;
+    font-size: 24px;
+}
+
+textarea {
+    
+    height: 200px;
+}
+
+.customer-support h2 {
+    color:black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.customer-support p {
+    color:black;
+    margin: 0;
+    font-size: 24px;
+}
+
+.submit-btn {
+    background-color: #c4a484; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px;
+    height: 60px;
+    margin-top: 20px;
+    float: right;
+    margin-right: 140px;
+    font-size: 18px;
+}
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 650px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    .submit-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+#success-message {
+            color:#B89C65;
+            font-weight: bold;
+            margin-left:250px;
+            background-color:white;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .hidden {
+    display: none;
+}
+    </style>
+</style>
+</head>
+<body>
+ <header class="main-header">
+    <nav class="navbar">
+      <a href="Homeuser.html">Home</a>
+      <a href="Reservation.html">Reservation</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Aboutus.html">About us</a>
+      <a href="Contactus.html" class="active">Contact us</a>
+      <a href="Help.html">Help</a>
+    </nav>
+     <div class="nav-container">
+            <div class="logo"><span style="color: #B89C65;">Book</span>mytable<p style="color: white;">Never Wait for your meal</p></div>
+            <div class="search-container">
+            <input type="search" placeholder="Search">
+            <button type="button">🔍</button>
+        </div>
+        <div class="users">
+            <span class="notification-icon"><i class="fa-regular fa-bell"></i></span> 
+            <span ><a href="Contactus.html" style="text-decoration: none;color: #B89C65;"><i class="fa fa-user"></i></a></span>
+            <span class="icon"><a href="Wishlist.html"><i class="fa-regular fa-heart"></i></a></span>
+        <div class="user-profile"><img src="Photo by Dani.png"></div>
+    </div>
+        </div>
+  </header> 
+  <div class="form-cont"> 
+    <header class="header2">
+            <h1>Contact Us</h1>
+        </header>
+  <div class="form-container">
+        
+        <form id="myForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email id</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="mobile">Mobile number</label>
+                    <input type="tel" id="mobile" name="mobile">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message for Query</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+            </div>
+            <div class="customer-support">
+                <h2>Customer Support</h2>
+                <p>📞 Helpline Number : +91 98765 43210</p>
+            </div>
+            <button type="submit" class="submit-btn" id="submit-button">Submit</button>
+            <div id="success-message" class="hidden">
+    Submitted successfully!
+</div>
+        </form>
+    </div>
+  </div>
+  <div>
+    <img src="unsplash_48CkLuEGgWU.png" width="100%">
+  </div>
+  <div id="success-message" class="hidden">
+    Submitted successfully!
+</div>
+  <script>
+    const nameField=document.getElementById('name');
+    const emailField = document.getElementById('email');
+const passwordField = document.getElementById('mobile');
+const messageField = document.getElementById('message');
+
+nameField.onclick = () => nameField.value = "Amjath Althaf";
+emailField.onclick = () => emailField.value = "amjaann@gmail.com";
+passwordField.onclick=() => passwordField.value ='+91 7867980688';
+messageField.onclick = () => messageField.value = "I need discount options for table booking";
+   </script>
+   <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const form = document.getElementById('myForm');
+    const submitButton = document.getElementById('submit-button');
+    const successMessage = document.getElementById('success-message');
+    form.addEventListener('submit', function(e) {
+        
+        e.preventDefault();
+
+        submitButton.style.display = 'none';
+
+        successMessage.classList.remove('hidden');
+
+        setTimeout(function() {
+            
+         window.location.href = 'Homeuser.html';
+        }, 2000); 
+    });
+});
+   </script>
+  
+
+  <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Add Your Restaurant</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Info & conditions</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Cities</h4>
+                    <ul>
+                        <li><a href="#">Chennai</a></li>
+                        <li><a href="#">Bangalore</a></li>
+                        <li><a href="#">Hyderabad</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Booking Status</a></li>
+                        <li><a href="#">Add Restaurant</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <p style="padding-left: 100px;font-weight: bold;">_________________________________________________________________________________________________________________________________________________________________</p>
+            <div class="footer-city">
+                <div class="city">
+                    <p>Restaurant in Chennai</p>
+                    <p>Restaurant in Pune</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Bangalore</p>
+                    <p>Restaurant in Kolkata</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Mumbai</p>
+                    <p>Restaurant in Hyderabad</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div><p>© 2023, **Book My Table**.Com, all rights reserved.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-google" style="color: rgb(140, 188, 242);" ></i>
+                    <i class="fa-brands fa-twitter" style="color: rgb(70, 148, 237);"></i>
+                    <img src="instagram-icon.jpg" width="25px" style="border-radius: 10px;"></div>    
+                </div>
+                <div>
+                <p><i class="fa fa-phone"></i> (123) 8940-985498</p>
+                <p><i class="fa fa-envelope"></i> Info@Bookmytable.com</p>
+                <p><i class="fas fa-location-dot"></i> Chennai 54375387</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

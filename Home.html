@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="Layout5.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .hero-banner {
+    background-color: #6a5b40; 
+    color: white;
+    text-align: left;
+    padding: 80px 40px;
+    background-image: url('Frame 419.png');
+    background-size: cover;
+    background-position: center;
+    height:250px;
+}
+
+.hero-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 200px;
+    margin-right: 300px;
+    line-height: 1.2;
+    margin-top: 80px;
+    text-align: left;
+    letter-spacing: 2px;
+}
+.cities-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5EBDD;
+}
+
+.cities-section h2 {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+/* General styling for the container */
+.scroller {
+  max-width: 100%;
+  overflow: hidden; /* Hides the duplicated content until it moves into view */
+}
+
+.scroller-inner {
+  display: flex;
+  width: max-content; 
+  animation: bidirectional-scroll 5s linear infinite alternate;  
+}
+.card p{
+    font-size: x-large;
+}
+
+
+
+.card {
+  
+  flex-shrink: 0;
+  margin: 0 1rem;
+  width: 700px;
+  border-radius: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+
+@keyframes bidirectional-scroll {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    
+    transform: translateX(-1200px); 
+  }
+}
+
+
+
+
+/* How it works Section */
+.how-it-works-section {
+    background-color: #F5EBDD;
+    padding: 50px 0;
+    text-align: center;
+    color: black;
+}
+
+.how-it-works-section h2 {
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.step {
+    width: 22%;
+    background-color: #F5EBDD;
+}
+
+.step i {
+    font-size: 5rem;
+    color: #B89C65;
+    margin-bottom: 10px;
+}
+.step p{
+    font-size: 38px;
+}
+
+.reviews-section {
+    background-color: #B89C65;
+    background-image: url('Frame 429.png');
+    height: 350px;
+    background-size: cover;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+.reviews-section h2{
+    margin-top: 10px;
+}
+
+
+.testimonials-section {
+    background-color: #B89C65;
+    padding: 40px 0;
+    color: white;
+}
+
+.testimonials-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+}
+
+.testimonial {
+    text-align: center;
+    width: 30%;
+}
+
+.testimonial i, .testimonial img {
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+
+.newsletter-location-section {
+    background-color: #F5EBDD;
+}
+
+.newsletter-location-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.location-map{
+    flex: 1;
+    height:300px;
+    background-image: url('map.png');
+}
+.newsletter-signup {
+    flex:2;
+}
+.location-map i{
+    color:black;
+}
+.location-map img{
+    width:100%;
+    height: 100%;
+}
+
+.newsletter-signup h2 {
+    margin-bottom: 15px;
+    margin-left: 100px;
+}
+
+.newsletter-signup form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-signup input {
+    padding: 20px;
+    margin-left: 100px;
+    border: 1px solid #ccc;
+    width:500px;
+    border-radius: 8px;
+    
+}
+.newsletter-signup ::placeholder{
+    color: black;
+    font-size: 28px;
+}
+
+
+.newsletter-signup button {
+    background-color: #B89C65;
+    color: white;
+    padding: 20px 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width:150px;
+    margin-left: 20px;
+    font-size: 22px;
+}
+button{
+    background-color: #B89C65;
+    width:200px;
+    height:60px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    font-size: larger;
+    color: white;
+}
+        
+
+.form-container {
+    margin-left:150px;
+    background-color: white;
+    padding:10px;
+    height: 550px;
+    flex:2;
+    width:200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    
+}
+
+.image-container {
+    background: url('Register.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height:570px;
+    flex:1;
+    margin-top: 0;
+}
+.image-container img{
+    height: 100%;
+    width:100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width:500px;
+    padding: 10px;
+    margin-left: 130px;
+    margin-right: 100px;
+    border: 2px solid #B89C65;
+    border-radius: 5px;
+    height:60px;
+    font-size: larger;
+    box-sizing: border-box;
+}
+
+.login-btn {
+    width: 25%;
+    border: none;
+    border-radius: 5px;
+    background-color: #B89C65;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 130px;
+    padding: 5px;
+}
+
+.forgot-pw {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color:black;
+    margin-top: 10px;
+    margin-left: 100px;
+    text-decoration: none;
+}
+
+.signup-text {
+    text-align: center;
+    margin: 22px 0 10px;
+    color:black;
+    font-size: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:40px;
+    border:2px solid black;
+    padding:20px;
+    margin-left: 130px;
+    margin-right: 100px;
+    border-radius: 10px;
+    
+    
+}
+
+.social-icons a img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.create-account {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.create-account a {
+    color:#B89C65;
+    text-decoration: none;
+}
+.modal {
+  display: none; 
+  z-index: 1; /* Sit on top */
+  position: fixed;
+  right: 0;
+  top:50px;
+  width: 90%;
+  height: 80%; /* Full height */
+  background-color:rgb(246, 228, 229);
+  gap:100px;
+}
+.modal-cont1{
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  right: 0;
+  top:10px;
+  width: 90%;
+  height:80%;
+  background-color:rgb(246, 228, 229);
+  gap:100px;
+  margin-left: 200px;
+}
+.modal-cont{
+    display: flex;
+ flex-direction: row;
+ height: 100%;
+}
+.modal-container{
+display: flex;
+gap: 100px;
+height: 80%;
+}
+
+.close {
+  color:black;
+  float: right;
+  font-size: 32px;
+  margin-top: 0;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.form-container span{
+    margin-top: 0;
+    margin-left: 100px;
+}
+.modal-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.image-section {
+    flex: 1;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.form-section {
+    flex:1;
+    display: flex;
+    width:300px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin:70px;
+    border-radius: 10px;
+}
+
+.form-container1 {
+    width: 80%;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color:black;
+}
+
+.input-group1 {
+    margin-bottom: 15px;
+}
+.input-group1::placeholder{
+    color:#B89C65;
+}
+
+.input-group1 input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #B89C65;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: larger;
+}
+.signup-btn {
+    width: 60%;
+    padding: 10px;
+    background-color: #B89C65;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+.signup-btn:hover {
+    background-color: #e60000;
+
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #B89C65;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+    <nav class="navbar">
+      <a href="Home.html" class="active">Home</a>
+      <a href="Reservation.html">Reservation</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Aboutus.html">About us</a>
+      <a href="Contactus.html">Contact us</a>
+      <a href="Help.html">Help</a>
+    </nav>
+     <div class="nav-container">
+            <div class="logo"><span style="color: #B89C65;">Book</span>mytable<p style="color: white;">Never Wait for your meal</p></div>
+            <div class="search-container">
+            <input type="search" placeholder="Search">
+            <button type="button">🔍</button>
+        </div>
+        <div>
+           <button onclick="openForm()">Register</button>
+        </div>
+        </div>
+  </header>
+
+<div class="modal" id="registrationModal">
+    <div class="modal-container">
+        <div class="form-container" id="formContainer">
+            <div class="modal-header"><h2 id="heading" style="text-align: center;margin-top: 60px;font-size:32px;">Register Free !</h2><span class="close" onclick="closeForm()">&times;</span></div>
+            <form id="loginform">
+                <div class="input-group" >
+                    <input type="email" id="email" placeholder="Enter your e-mail" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div style="display: flex;flex-direction: row;"><button class="login-btn" onclick="redirectPage()">Login</button>
+                    <div id="forgot">
+            <a href="#" class="forgot-pw">Forget your password?</a></div></div>
+            </form>
+            
+            <script>
+const emailField = document.getElementById('email');
+const passwordField = document.getElementById('password');
+emailField.onclick = () => emailField.value = "amjaann@gmail.com";
+passwordField.onclick=() => passwordField.value ='1234567';
+</script>
+           <div>
+            <p class="signup-text">____________________Sign Up Using_________________</p></div>
+            <div class="social-icons" id="socialicons">
+                <a href="#"><img src="google-icon.jpg" alt="Google"></a>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram-icon.jpg" alt="Instagram"></a>
+                <a href="#"><img src="twitter-icon.jpg" alt="Twitter"></a>
+            </div>
+            <p class="create-account" id="account">Don't have an account? <a href="#" onclick="toggleForms('signUp', 'registrationModal'); return false;" >Create New Account.</a>
+    </div>
+        <div class="image-container">
+        
+        </div>
+    </div>
+    </div>
+    <div class="modal-cont1" style="display: none;" id="signUp">
+        <div class="modal-cont">
+        <div class="image-section">
+            <img src="table.png" width="300px" alt="Table">
+        </div>
+        <div class="form-section" id="formContainers" >
+            <div class="form-container1" >
+                <div class="form-header" id="formheader" >
+                    <h2>Sign Up</h2>
+                    <span class="close" onclick="closeForm()">&times;</span>
+                </div>
+                <form id="signupForm">
+                    <div class="input-group1">
+                        <input type="text" id="fullName" required placeholder="Full Name">
+                    </div>
+                    <div class="input-group1">
+                        <input type="email" id="email1" required placeholder="Email">
+                    </div>
+                    <div class="input-group1">
+                        <input type="password" id="password1" required placeholder="Password">
+                    </div>
+                    <button type="submit" onclick="redirectPage()">Sign Up</button>
+                </form>
+                 <script>
+        const nameField = document.getElementById('fullName');
+const email1Field = document.getElementById('email1');
+email1Field.onclick = () => email1Field.value = "amjaann@gmail.com";
+nameField.onclick=() => nameField.value ='Amjath Althaf';
+const passField = document.getElementById('password1');
+passField.onclick = () => passField.value = '1234567';
+    </script>
+
+                   <div class="login-link" id="loginlink">
+                    <p>Already have an account? <a href="#" onclick="toggleForms('registrationModal','signUp'); return false;">Log in</a></p>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            
+
+   
+      
+<script>
+    var modal = document.getElementById("registrationModal");
+
+function openForm() {
+  modal.style.display = "block";
+}
+
+function closeForm() {
+  modal.style.display = "none";
+}
+  
+function handlePaymentSuccess()
+{
+document.getElementById('registrationModal').style.display = 'none';
+document.getElementById('signUp').style.display = 'block';
+}
+function toggleForms(showFormId, hideFormId) {
+    
+    var showForm = document.getElementById(showFormId);
+    var hideForm = document.getElementById(hideFormId);
+
+    
+    if (showForm) {
+        showForm.style.display = 'block'; 
+    }
+
+    
+    if (hideForm) {
+        hideForm.style.display = 'none';
+    }
+}
+function redirectPage() {
+
+    window.location.href = 'Homeuser.html';
+}
+
+</script>
+
+
+  <section class="hero-banner">
+        <h1>Book Table at your favourite restaurant and get served instantly</h1>
+    </section>
+<div>
+     <section class="cities-section">
+        <div class="container">
+            <h2>Explore restaurant your city</h2>
+             <div class="scroller" onclick="redirectToPage()" data-animated="true">
+        <div class="scroller-inner">
+                <div class="card">
+                    <img src="Chennai.png" alt="Chennai">
+                    <p>Chennai</p>
+                </div>
+                <div class="card">
+                    <img src="Bangalore.png" alt="Bangalore">
+                    <p>Bangalore</p>
+                </div>
+                <div class="card">
+                    <img src="Mumbai.png" alt="Mumbai">
+                    <p>Mumbai</p>
+                </div>
+                <div class="card">
+                    <img src="Bangalore.png" alt="Hyderabad">
+                    <p>Hyderabad</p>
+                </div>
+                <div class="card">
+                    <img src="Chennai.png" alt="Chennai">
+                    <p>Chennai</p>
+                </div>
+                 
+            </div>
+        </div>
+         
+        </div>
+
+    </section>
+    <script>
+        function redirectToPage() {
+    window.location.href = "Explore.html";
+}
+    </script>
+     <section class="how-it-works-section">
+        <div class="container">
+            <h2>How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <i class="fas fa-search icon"></i>
+                    <p>Search restaurant</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-calendar-alt"></i>
+                    <p>Select date/time</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-chair"></i>
+                    <p>Reserve your table</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-utensils"></i>
+                    <p>Get served instantly</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <section class="reviews-section">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+        </div>
+    </section>
+    <section class="testimonials-section">
+        <div class="container testimonials-content">
+            <div class="testimonial">
+                <img src="customer1.png" alt="Customer 1">
+                <p>Aman.P</p>
+                <p><span style="color: gold; font-size: 30px;">★★★★★</span></p>
+                <p>Great and excellent service.</p>
+            </div>
+            <div class="testimonial">
+        <img src="customer2.png" alt="Customer 2">
+                <p>David.p</p>
+                <p><span style="color: gold; font-size: 30px;">★★★★★</span></p>
+            <p>Great and Excellent Service.</p>
+            </div>
+            <div class="testimonial">
+        <img src="customer3.png" alt="Customer 3">
+                <p>Gopi.P</p>
+                <p><span style="color: gold; font-size: 30px;">★★★★★</span></p>
+                <p>Flexible service.</p>
+             </div>
+        </div>
+    </section>
+
+    <section class="newsletter-location-section">
+        <div class="container newsletter-location-content">
+            <div class="location-map">
+                <div style="margin-top: 100px;font-size: larger;font-weight: bold;margin-left: 100px;"><i class="fas fa-location-dot"></i>
+        <span style="color:rgb(78, 173, 195)">G</span>
+        <span style="color: rgb(200, 84, 84);">O</span>
+        <span style="color: yellow;">O</span>
+        <span style="color: rgb(78, 173, 195);">G</span>
+        <span style="color: rgb(75, 214, 233);">L</span>
+        <span style="color: rgb(200, 84, 84);">E</span>
+    </div>
+                <div style="color: #B89C65;font-size: larger;font-weight: bold;margin-top: 50px;margin-left: 40px;">
+                <p><i class="fa fa-phone"></i> (123) 8940-985498</p>
+                <p><i class="fa fa-envelope"></i> Info@Bookmytable.com</p>
+                <p><i class="fas fa-location-dot"></i>Chennai 54375387</p>
+                </div>
+            </div>
+            <div class="newsletter-signup">
+                <h2>Get offers in Your Inbox</h2>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Add Your Restaurant</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Info & conditions</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Cities</h4>
+                    <ul>
+                        <li><a href="#">Chennai</a></li>
+                        <li><a href="#">Bangalore</a></li>
+                        <li><a href="#">Hyderabad</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Booking Status</a></li>
+                        <li><a href="#">Add Restaurant</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <p style="padding-left: 100px;font-weight: bold;">_________________________________________________________________________________________________________________________________________________________________</p>
+            <div class="footer-city">
+                <div class="city">
+                    <p>Restaurant in Chennai</p>
+                    <p>Restaurant in Pune</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Bangalore</p>
+                    <p>Restaurant in Kolkata</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Mumbai</p>
+                    <p>Restaurant in Hyderabad</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div><p>© 2023, **Book My Table**.Com, all rights reserved.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-google" style="color: rgb(140, 188, 242);" ></i>
+                    <i class="fa-brands fa-twitter" style="color: rgb(70, 148, 237);"></i>
+                    <img src="instagram-icon.jpg" width="25px" style="border-radius: 10px;"></div>    
+                </div>
+                <div>
+                <p><i class="fa fa-phone"></i> (123) 8940-985498</p>
+                <p><i class="fa fa-envelope"></i> Info@Bookmytable.com</p>
+                <p><i class="fas fa-location-dot"></i> Chennai 54375387</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+ 
