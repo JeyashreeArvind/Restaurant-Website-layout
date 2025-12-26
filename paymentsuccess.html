@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant website</title>
+    <link rel="stylesheet" href="Layout5.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        .container2{
+
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.confirmation-box {
+    text-align: center;
+    padding: 40px;
+    background-color: #f7f3e8;
+    max-width: 400px;
+    width: 100%;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #c7b88e; /* Muted gold/beige color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.confirmation-email-text {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.email-address {
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.bottom-section {
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    object-fit: cover;
+    
+}
+.bottom-section img{
+    width: 100%;
+    height:400px;
+}
+
+
+.confirmation{
+    font-family: sans-serif;
+    background-color: #f7f3e8; /* Light beige background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+    </style>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <a href="Homeuser.html">Home</a>
+      <a href="Reservation.html">Reservation</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Aboutus.html">About us</a>
+      <a href="Contactus.html">Contact us</a>
+      <a href="Help.html">Help</a>
+    </nav>
+     <div class="nav-container">
+            <div class="logo"><span style="color: #B89C65;">Book</span>mytable<p style="color: white;">Never Wait for your meal</p></div>
+            <div class="search-container">
+            <input type="search" placeholder="Search">
+            <button type="button">🔍</button>
+        </div>
+        <div class="users">
+            <span class="notification-icon"><i class="fa-regular fa-bell"></i></span> 
+            <span ><a href="Contactus.html" style="text-decoration: none;color: #B89C65;"><i class="fa fa-user"></i></a></span>
+            <span class="icon"><a href="Wishlist.html"><i class="fa-regular fa-heart"></i></a></span>
+        <div class="user-profile"><img src="Photo by Dani.png"></div>
+    </div>
+        </div>
+  </header>
+    
+
+
+    <div class="confirmation" id="confirmation-page" >
+ <div class="container2">
+        <div class="confirmation-box">
+            <div class="icon-circle">               
+                 &#10003; 
+            </div>
+            <h1>Reservation Confirmed</h1>
+            <p>Your table has been reserved.</p>
+            <p class="confirmation-email-text">A Confirmation email has been sent to:</p>
+            <p class="email-address">amjaann@gmail.com</p>
+        </div>
+    </div>
+    <div class="bottom-section">
+    <img src="unsplash_iqde_OqSVM8.png"></div>
+    </div></div>  
+    
+    
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Add Your Restaurant</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Info & conditions</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Cities</h4>
+                    <ul>
+                        <li><a href="#">Chennai</a></li>
+                        <li><a href="#">Bangalore</a></li>
+                        <li><a href="#">Hyderabad</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Booking Status</a></li>
+                        <li><a href="#">Add Restaurant</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <p style="padding-left: 100px;font-weight: bold;">_________________________________________________________________________________________________________________________________________________________________</p>
+            <div class="footer-city">
+                <div class="city">
+                    <p>Restaurant in Chennai</p>
+                    <p>Restaurant in Pune</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Bangalore</p>
+                    <p>Restaurant in Kolkata</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Mumbai</p>
+                    <p>Restaurant in Hyderabad</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div><p>© 2023, **Book My Table**.Com, all rights reserved.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-google" style="color: rgb(140, 188, 242);" ></i>
+                    <i class="fa-brands fa-twitter" style="color: rgb(70, 148, 237);"></i>
+                    <img src="instagram-icon.jpg" width="25px" style="border-radius: 10px;"></div>    
+                </div>
+                <div>
+                <p><i class="fa fa-phone"></i> (123) 8940-985498</p>
+                <p><i class="fa fa-envelope"></i> Info@Bookmytable.com</p>
+                <p><i class="fas fa-location-dot"></i> Chennai 54375387</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

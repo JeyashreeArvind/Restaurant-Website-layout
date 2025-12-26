@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="Layout5.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+    .payment{
+        display: flex;
+        flex-direction: row;
+    }
+    .payment-heading{
+        text-align: center;
+        display: flex;
+        padding: 30px;
+        color: white;
+        background-color: #B89C65;
+        border: 2px solid #907a4f;
+        align-items: center;
+        justify-content: center;
+    }
+    /*.payment-container {
+    display: flex;
+    flex: 2;
+    gap: 20px;
+}*/
+.payment-img{
+    flex: 1;
+}
+/*.payment-selection {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}*/
+
+.payment-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 2;
+
+}
+
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #e9e9e9;
+    width:300px;
+}
+
+.arrow {
+    transition: transform 0.3s;
+}
+
+.dropdown-options {
+    display: none; /* Hidden by default */
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background: white;
+    width: 300px;
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f1f1f1;
+}
+
+.card-form {
+    margin-top: 20px;
+    padding:50px;
+    border:2px solid #B89C65;
+    border-radius: 8px;
+    height: 500px;
+    display: block;
+}
+
+.card-form input {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 80px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    border: 1px solid #B89C65;
+    border-radius: 8px;
+}
+
+.card-form button {
+    width: 30%;
+    padding: 20px;
+    background-color:#B89C65;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+}
+
+
+.card-total{
+    display: flex;
+    flex-direction:row;
+    gap:60px;
+}
+.suc-message{
+    color: #B89C65;
+    font-size: 28px;
+    display: none;
+}
+.container2{
+
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.confirmation-box {
+    text-align: center;
+    padding: 40px;
+    background-color: #f7f3e8;
+    max-width: 400px;
+    width: 100%;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #c7b88e; /* Muted gold/beige color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.confirmation-email-text {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.email-address {
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.bottom-section {
+    background-color: #f5a623; /* Orange color */
+    height: 100px; /* Adjust height as needed */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.step-number {
+    background-color: #e94e3e; /* Red/orange color for the number background */
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    /* Position it slightly above the orange bar */
+    transform: translateY(-50%); 
+}
+.confirmation{
+    font-family: sans-serif;
+    background-color: #f7f3e8; /* Light beige background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    display: none;
+}
+
+
+</style>
+</head>
+<body>
+ <header class="main-header">
+    <nav class="navbar">
+      <a href="Homeuser.html">Home</a>
+      <a href="Reservation.html">Reservation</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Aboutus.html">About us</a>
+      <a href="Contactus.html">Contact us</a>
+      <a href="Help.html">Help</a>
+    </nav>
+     <div class="nav-container">
+            <div class="logo"><span style="color: #B89C65;">Book</span>mytable<p style="color: white;">Never Wait for your meal</p></div>
+            <div class="search-container">
+            <input type="search" placeholder="Search">
+            <button type="button">🔍</button>
+        </div>
+        <div class="users">
+            <span class="notification-icon"><i class="fa-regular fa-bell"></i></span> 
+            <span ><a href="Contactus.html" style="text-decoration: none;color: #B89C65;"></a><i class="fa fa-user"></i></span>
+            <span class="icon"><a href="Wishlist.html"><i class="fa-regular fa-heart"></i></a></span>
+        <div class="user-profile"><img src="Photo by Dani.png"></div>
+    </div>
+        </div>
+  </header>
+
+  <div class="payment-heading" id="paymentHeading">
+    <h1>Payment Selection</h1>
+  </div>  
+  <div class="payment" id="paymentPage">
+    <div class="payment-img">
+    <img src="unsplash_yTUYqXfIL80.png" width="500px">
+    </div>
+    <div class="payment-container" id="form-container">
+        <!-- Payment Selection Dropdown -->
+        <div class="dropdown-header" id="payment-select" onclick="toggleDropdown()">
+            <span>Payment Selection</span>
+            <span class="arrow" id="arrow">^</span>
+        </div>
+
+        <div class="dropdown-options" id="dropdown-options">
+            <div class="option" onclick="selectPaymentMethod('Credit card')">Credit card</div>
+            <div class="option" onclick="selectPaymentMethod('Debit card')">Debit card</div>
+            <div class="option" onclick="selectPaymentMethod('Google pay')">Google pay</div>
+            <div class="option" onclick="selectPaymentMethod('UPI')">UPI</div>
+        </div>
+
+        <!-- Credit Card Form -->
+        <div class="card-form" id="card-form" style="display: none;">
+            <h3>Enter Card Details</h3>
+            <div class="card-total">
+            <div class="card-text">
+            <input type="text" id="cardholder-name" placeholder="Cardholder Name" required>
+            <input type="text" id="expiry-date" placeholder="MM/YY" required>
+            </div>
+            <div class="card-text">
+             <input type="text" id="card-number" placeholder="Card Number" required>
+            <input type="text" id="cvv" placeholder="CVV" required>
+            </div> 
+            </div>
+            <button id="pay-button">Pay</button>
+            </div>
+         <div class="suc-message" id="success-message">
+ Reservation Successful
+</div>  
+</div>   
+</div>
+  
+
+
+<script>
+function toggleDropdown() {
+    const options = document.getElementById('dropdown-options');
+    const arrow = document.getElementById('arrow');
+    const form = document.getElementById('card-form');
+
+    if (options.style.display === 'block') {
+        options.style.display = 'none';
+        arrow.style.transform = 'rotate(0deg)';
+    } else {
+        options.style.display = 'block';
+        arrow.style.transform = 'rotate(180deg)';
+        form.style.display = 'none';
+    }
+}
+
+function selectPaymentMethod(method) {
+    document.querySelector('.dropdown-header span:first-child').textContent = method;
+    
+    toggleDropdown();
+
+    const form = document.getElementById('card-form');
+    const select=document.getElementById('payment-select');
+   
+    
+    if (method === 'Credit card' || method === 'Debit card') {
+        form.style.display = 'block';
+        select.style.display = 'none';
+
+    } else {
+        form.style.display = 'none';
+        if (method === 'Google pay' || method === 'UPI') {
+             alert(`Redirecting to ${method}... Payment successful!`);
+        }
+    }
+}
+</script>
+<script>
+const name = document.getElementById('cardholder-name');
+    const number = document.getElementById('card-number');
+    const expiry = document.getElementById('expiry-date');
+    const cvv = document.getElementById('cvv');
+
+    name.onclick = () => name.value = "Amjath Althaf";
+number.onclick = () => number.value = '609864790';
+expiry.onclick=() => expiry.value ='22/09/2029';
+cvv.onclick=() => cvv.value = '788';
+
+function handlePaymentSuccess()
+{
+document.getElementById('card-form').style.display = 'none';
+document.getElementById('success-message').style.display = 'block';
+const redirectUrl = "paymentsuccess.html"; // Replace with your target page (e.g., "login.html", "index.html")
+
+// Define the delay in milliseconds (3 seconds = 3000 ms)
+const delay = 3000; 
+
+// Function to handle the redirection
+function redirectToPage() {
+    window.location.href = redirectUrl;
+}
+
+// Set a timeout to call the redirection function after the specified delay
+setTimeout(redirectToPage, delay);
+}
+
+
+</script>
+<script>
+    document.getElementById('pay-button').addEventListener('click', handlePaymentSuccess);
+</script>
+
+
+  <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Add Your Restaurant</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Info & conditions</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Cities</h4>
+                    <ul>
+                        <li><a href="#">Chennai</a></li>
+                        <li><a href="#">Bangalore</a></li>
+                        <li><a href="#">Hyderabad</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Booking Status</a></li>
+                        <li><a href="#">Add Restaurant</a></li>
+                    </ul>
+                </div>   
+            </div>
+            <p style="padding-left: 100px;font-weight: bold;">_________________________________________________________________________________________________________________________________________________________________</p>
+            <div class="footer-city">
+                <div class="city">
+                    <p>Restaurant in Chennai</p>
+                    <p>Restaurant in Pune</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Bangalore</p>
+                    <p>Restaurant in Kolkata</p>
+                </div>
+                <div class="city">
+                    <p>Restaurant in Mumbai</p>
+                    <p>Restaurant in Hyderabad</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div><p>© 2023, **Book My Table**.Com, all rights reserved.</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-google" style="color: rgb(140, 188, 242);" ></i>
+                    <i class="fa-brands fa-twitter" style="color: rgb(70, 148, 237);"></i>
+                    <img src="instagram-icon.jpg" width="25px" style="border-radius: 10px;"></div>    
+                </div>
+                <div>
+                <p><i class="fa fa-phone"></i> (123) 8940-985498</p>
+                <p><i class="fa fa-envelope"></i> Info@Bookmytable.com</p>
+                <p><i class="fas fa-location-dot"></i> Chennai 54375387</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
